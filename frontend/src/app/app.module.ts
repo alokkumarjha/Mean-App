@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EmpCreateComponent } from './components/emp-create/emp-create.component';
+import { EmpListComponent } from './components/emp-list/emp-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmpCreateComponent,
+    EmpListComponent
   ],
   imports: [
     BrowserModule,
