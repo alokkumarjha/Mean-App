@@ -20,7 +20,7 @@ module.exports ={
     const schema={
         name : Joi.string().min(3).required(),
         email : Joi.string().email().required(),
-        designation : Joi.string().min(3).required()
+        designation : Joi.string().min(2).required()
     };
 
     const result=Joi.validate(req.body, schema);

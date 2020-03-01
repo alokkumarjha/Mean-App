@@ -5,18 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmpCreateComponent } from './components/emp-create/emp-create.component';
 import { EmpListComponent } from './components/emp-list/emp-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './service/api.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpCreateComponent,
-    EmpListComponent
+    EmpListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
